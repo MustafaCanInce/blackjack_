@@ -150,86 +150,86 @@ public class blackjack {
 
                     System.out.println("if you want to hit type to  :\"true\"\nif you want to stay type to :\"false\"");
                     hit = myObj.nextBoolean();
-                    if (hit == true){                                           //kullanıcı kart almak istiyor.
-                        for (int p = 0;hit == true ;p++){
+                    if (hit == true) {                                           //kullanıcı kart almak istiyor.
+                        for (int p = 0; hit == true; p++) {
                             Random rand = new Random();
                             int int_random0 = rand.nextInt(ten_point);
                             int int_random3 = rand.nextInt(upperbound);
                             int int_random4 = rand.nextInt(upperbound2);
                             Userspoint += a[int_random4][int_random3];
-                            if (a[int_random4][int_random3] != 10 && int_random4 == 0){
-                                System.out.println("Users "+ ca[p]+ " " + "Clubs    | "+a[int_random4][int_random3]);       //eğerki kullanıcı her yeni kart aldığında döngü sayesinde kartın kaçıcnı kart olduğunu ekrana basılacak.
-                            }else if (a[int_random4][int_random3] != 10 && int_random4 == 1){
-                                System.out.println("Users "+ ca[p] + " " + "Diamonds | "+a[int_random4][int_random3]);
-                            }else if (a[int_random4][int_random3] != 10 && int_random4 == 2){
-                                System.out.println("Users " + ca[p] + " "   + "Hearts   | "+a[int_random4][int_random3]);
-                            }else if (a[int_random4][int_random3] != 10 && int_random4 == 3){
-                                System.out.println("Users " + ca[p] + " "   + "Spades   | "+a[int_random4][int_random3]);                       //eğerki user or computer +11  <=21 olursa 11 eklenecek 1 yerine.
+                            if (a[int_random4][int_random3] != 10 && int_random4 == 0) {
+                                System.out.println("Users " + ca[p] + " " + "Clubs    | " + a[int_random4][int_random3]);       //eğerki kullanıcı her yeni kart aldığında döngü sayesinde kartın kaçıcnı kart olduğunu ekrana basılacak.
+                            } else if (a[int_random4][int_random3] != 10 && int_random4 == 1) {
+                                System.out.println("Users " + ca[p] + " " + "Diamonds | " + a[int_random4][int_random3]);
+                            } else if (a[int_random4][int_random3] != 10 && int_random4 == 2) {
+                                System.out.println("Users " + ca[p] + " " + "Hearts   | " + a[int_random4][int_random3]);
+                            } else if (a[int_random4][int_random3] != 10 && int_random4 == 3) {
+                                System.out.println("Users " + ca[p] + " " + "Spades   | " + a[int_random4][int_random3]);                       //eğerki user or computer +11  <=21 olursa 11 eklenecek 1 yerine.
                             }
-                            if (a[int_random4][int_random3] == 10  && int_random4 == 0){
-                                System.out.println("Users " + ca[p] + " "    + "Clubs    | " + b[int_random0] + " " + a[int_random4][int_random3]);
-                            }else if (a[int_random4][int_random3] == 10  && int_random4 == 1){
-                                System.out.println("Users " + ca[p] + " "    + "Diamonds | " + b[int_random0] + " "  + a[int_random4][int_random3]);
-                            }else if (a[int_random4][int_random3] == 10  && int_random4 == 2){
-                                System.out.println("Users " + ca[p] + " "    + "Hearts   | " + b[int_random0] + " "  + a[int_random4][int_random3]);
-                            }else if (a[int_random4][int_random3] == 10  && int_random4 == 3){
-                                System.out.println("Users " + ca[p] + " "    + "Spades   | " + b[int_random0] + " "  + a[int_random4][int_random3]);
+                            if (a[int_random4][int_random3] == 10 && int_random4 == 0) {
+                                System.out.println("Users " + ca[p] + " " + "Clubs    | " + b[int_random0] + " " + a[int_random4][int_random3]);
+                            } else if (a[int_random4][int_random3] == 10 && int_random4 == 1) {
+                                System.out.println("Users " + ca[p] + " " + "Diamonds | " + b[int_random0] + " " + a[int_random4][int_random3]);
+                            } else if (a[int_random4][int_random3] == 10 && int_random4 == 2) {
+                                System.out.println("Users " + ca[p] + " " + "Hearts   | " + b[int_random0] + " " + a[int_random4][int_random3]);
+                            } else if (a[int_random4][int_random3] == 10 && int_random4 == 3) {
+                                System.out.println("Users " + ca[p] + " " + "Spades   | " + b[int_random0] + " " + a[int_random4][int_random3]);
                             }
                             System.out.println("Userspoint = " + Userspoint);
                             System.out.println("if you want to hit type to  :\"true\"\nif you want to stay type to :\"false\"");
                             hit = myObj.nextBoolean();
-                            if (Userspoint < 11 && a[int_random4][int_random3] == 1){                      //eğerki user in çektiği 1.+2.+.3. kartların toplmaı 11 in altında kalırsa gelen 1 11 olarak değer alır.
+                            if (Userspoint < 11 && a[int_random4][int_random3] == 1) {                      //eğerki user in çektiği 1.+2.+.3. kartların toplmaı 11 in altında kalırsa gelen 1 11 olarak değer alır.
                                 Userspoint += 10;
                             }
-                            if (Userspoint > 21 && (Computer + Computersecond0) < 21){                          //eğerki kullanıcı 21 den büyük ve biglisayar 21 den küçük olursa.
+                            if (Userspoint > 21 && (Computer + Computersecond0) < 21) {                          //eğerki kullanıcı 21 den büyük ve biglisayar 21 den küçük olursa.
                                 hit = false;
                                 comput = false;
                             }
-                            if (Userspoint == 21 && ( (Computer + Computersecond0) != 21)){                      //eğerki kullanıcı 21 e eşit olursa ve bilgisayar 21 e eşit olmazsa.
+                            if (Userspoint == 21 && ((Computer + Computersecond0) != 21)) {                      //eğerki kullanıcı 21 e eşit olursa ve bilgisayar 21 e eşit olmazsa.
                                 hit = false;
                             }
                         }
                         System.out.println(Computersecond + Computersecond0);
-                        if (hit == false){                                                  //computer oynayışı.
-                            if (comput == true){
-                                if((Computer + Computersecond0) < 21){
-                                    if((Computer + Computersecond0) >= 18){
+                        if (hit == false) {                                                  //computer oynayışı.
+                            if (comput == true) {
+                                if ((Computer + Computersecond0) < 21) {
+                                    if ((Computer + Computersecond0) >= 18) {
                                         comput = false;
                                     }
-                                    for(int c = 0; (Computer + Computersecond0) <= 17;c++){                                                         //burayı ve userin kart çektiği kısmı döngüye koyup istediği kadar çektirmem lazım.
-                                        if (Userspoint > (Computer + Computersecond0)){
+                                    for (int c = 0; (Computer + Computersecond0) <= 17; c++) {                                                         //burayı ve userin kart çektiği kısmı döngüye koyup istediği kadar çektirmem lazım.
+                                        if (Userspoint > (Computer + Computersecond0)) {
                                             Random rand = new Random();
                                             int int_random0 = rand.nextInt(ten_point);
                                             int int_random5 = rand.nextInt(upperbound);
                                             int int_random6 = rand.nextInt(upperbound2);
                                             Computer += a[int_random6][int_random5];
 
-                                            if (a[int_random6][int_random5] != 10 && int_random6 == 0){
-                                                System.out.println("Computer " + ca[c]+ " " + "Clubs    | "+a[int_random6][int_random5]);
-                                            }else if (a[int_random6][int_random5] != 10 && int_random6 == 1){
-                                                System.out.println("Computer " + ca[c]+ " "  + "Diamonds | "+a[int_random6][int_random5]);
-                                            }else if (a[int_random6][int_random5] != 10 && int_random6 == 2){
-                                                System.out.println("Computer " + ca[c]+ " "  + "Hearts   | "+a[int_random6][int_random5]);
-                                            }else if (a[int_random6][int_random5] != 10 && int_random6 == 3){
-                                                System.out.println("Computer " + ca[c]+ " "  + "Spades   | "+a[int_random6][int_random5]);                       //eğerki user or computer +11  <=21 olursa 11 eklenecek 1 yerine.
+                                            if (a[int_random6][int_random5] != 10 && int_random6 == 0) {
+                                                System.out.println("Computer " + ca[c] + " " + "Clubs    | " + a[int_random6][int_random5]);
+                                            } else if (a[int_random6][int_random5] != 10 && int_random6 == 1) {
+                                                System.out.println("Computer " + ca[c] + " " + "Diamonds | " + a[int_random6][int_random5]);
+                                            } else if (a[int_random6][int_random5] != 10 && int_random6 == 2) {
+                                                System.out.println("Computer " + ca[c] + " " + "Hearts   | " + a[int_random6][int_random5]);
+                                            } else if (a[int_random6][int_random5] != 10 && int_random6 == 3) {
+                                                System.out.println("Computer " + ca[c] + " " + "Spades   | " + a[int_random6][int_random5]);                       //eğerki user or computer +11  <=21 olursa 11 eklenecek 1 yerine.
                                             }
 
-                                            if (a[int_random6][int_random5] == 10  && int_random6 == 0){
-                                                System.out.println("Computer " + ca[c]+ " "  + "Clubs    | " + b[int_random0] + " " + a[int_random6][int_random5]);
-                                            }else if (a[int_random6][int_random5] == 10  && int_random6 == 1){
-                                                System.out.println("Computer " + ca[c]+ " "  + "Diamonds | " + b[int_random0] + " "  + a[int_random6][int_random5]);
-                                            }else if (a[int_random6][int_random5] == 10  && int_random6 == 2){
-                                                System.out.println("Computer " + ca[c]+ " "  + "Hearts   | " + b[int_random0] + " "  + a[int_random6][int_random5]);
-                                            }else if (a[int_random6][int_random5] == 10  && int_random6 == 3){
-                                                System.out.println("Computer " + ca[c]+ " "  + "Spades   | " + b[int_random0] + " "  + a[int_random6][int_random5]);
+                                            if (a[int_random6][int_random5] == 10 && int_random6 == 0) {
+                                                System.out.println("Computer " + ca[c] + " " + "Clubs    | " + b[int_random0] + " " + a[int_random6][int_random5]);
+                                            } else if (a[int_random6][int_random5] == 10 && int_random6 == 1) {
+                                                System.out.println("Computer " + ca[c] + " " + "Diamonds | " + b[int_random0] + " " + a[int_random6][int_random5]);
+                                            } else if (a[int_random6][int_random5] == 10 && int_random6 == 2) {
+                                                System.out.println("Computer " + ca[c] + " " + "Hearts   | " + b[int_random0] + " " + a[int_random6][int_random5]);
+                                            } else if (a[int_random6][int_random5] == 10 && int_random6 == 3) {
+                                                System.out.println("Computer " + ca[c] + " " + "Spades   | " + b[int_random0] + " " + a[int_random6][int_random5]);
                                             }
-                                            if ((Computer + Computersecond0) < 11 && a[int_random6][int_random5] == 1){                                                 //eğerki ilk kart as olmazsa ve 2. çekilen kart as olursa değeri 11.
+                                            if ((Computer + Computersecond0) < 11 && a[int_random6][int_random5] == 1) {                                                 //eğerki ilk kart as olmazsa ve 2. çekilen kart as olursa değeri 11.
                                                 Computer += 10;
                                             }
-                                            if ((Computer + Computersecond0) == 21){
+                                            if ((Computer + Computersecond0) == 21) {
                                                 comput = false;
                                             }
-                                            if ((Computer + Computersecond0) > 21){
+                                            if ((Computer + Computersecond0) > 21) {
                                                 comput = false;
                                             }
 
@@ -241,7 +241,6 @@ public class blackjack {
                             }
                         }
                     }
-                    //sonuç hesaplamanın ayrı bir ddöngü içinde yapılması lazım sebebi kullanıcıya sorup duruyor hit istermisiniz bey efendi.
                     System.out.println("Userspoint = " + Userspoint);
                     System.out.println("Computer = " + (Computer + Computersecond0));
                     break;
